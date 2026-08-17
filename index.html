@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Softball Lessons &amp; Clinics</title>
+<!-- ═══════════════════════════════════════════════
+     EDIT THESE 3 THINGS:
+     1. Business name  → search for "YOUR BUSINESS NAME"
+     2. Booking URL    → search for "YOUR-SQUARESPACE-URL"
+     3. Instagram      → search for "YOUR-INSTAGRAM-HANDLE"
+     ═══════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #0e1b2e;       /* under-the-lights navy */
+    --night-deep: #091220;
+    --chalk: #f5f2ea;       /* foul-line chalk white */
+    --optic: #e8e337;       /* softball optic yellow */
+    --stitch: #c8332b;      /* seam red */
+    --dim: #8b96a8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Archivo', system-ui, sans-serif;
+    background: linear-gradient(180deg, var(--night) 0%, var(--night-deep) 100%);
+    color: var(--chalk);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  /* ---- Signature: CSS softball ---- */
+  .ball {
+    width: 96px; height: 96px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #f3ef6e, var(--optic) 55%, #c9c422);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(232, 227, 55, 0.25);
+  }
+  .ball::before, .ball::after {
+    content: "";
+    position: absolute;
+    width: 96px; height: 96px;
+    border: 3px dashed var(--stitch);
+    border-radius: 50%;
+  }
+  .ball::before { left: -62px; top: 0; }
+  .ball::after  { right: -62px; top: 0; }
+
+  .name {
+    font-family: 'Graduate', serif;
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+    color: var(--chalk);
+  }
+  .tag {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--dim);
+    letter-spacing: 0.02em;
+  }
+
+  /* ---- Chalk line divider ---- */
+  .chalk-line {
+    width: 56px; height: 3px;
+    background: var(--chalk);
+    opacity: 0.35;
+    margin: 26px auto;
+    border-radius: 2px;
+  }
+
+  /* ---- Buttons ---- */
+  .links { display: flex; flex-direction: column; gap: 14px; }
+  .btn {
+    display: block;
+    padding: 18px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn:focus-visible {
+    outline: 3px solid var(--optic);
+    outline-offset: 3px;
+  }
+  .btn-book {
+    background: var(--optic);
+    color: var(--night-deep);
+    box-shadow: 0 4px 18px rgba(232, 227, 55, 0.3);
+  }
+  .btn-book:hover { box-shadow: 0 6px 26px rgba(232, 227, 55, 0.45); }
+  .btn-ig {
+    background: transparent;
+    color: var(--chalk);
+    border: 2px solid rgba(245, 242, 234, 0.4);
+  }
+  .btn-ig:hover { border-color: var(--chalk); }
+  .btn small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: 3px;
+    opacity: 0.75;
+  }
+
+  footer {
+    margin-top: 34px;
+    font-size: 0.75rem;
+    color: var(--dim);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="ball" aria-hidden="true"></div>
+
+    <h1 class="name">YOUR BUSINESS NAME</h1>
+    <p class="tag">Private softball lessons &amp; hitting clinics · SoCal</p>
+
+    <div class="chalk-line" aria-hidden="true"></div>
+
+    <nav class="links" aria-label="Links">
+      <a class="btn btn-book" href="https://YOUR-SQUARESPACE-URL.com">
+        Book a Lesson
+        <small>Openings &amp; scheduling</small>
+      </a>
+      <a class="btn btn-ig" href="https://instagram.com/YOUR-INSTAGRAM-HANDLE">
+        Instagram
+        <small>Follow or DM with questions</small>
+      </a>
+    </nav>
+
+    <footer>See you at the cages</footer>
+  </main>
+</body>
+</html>
